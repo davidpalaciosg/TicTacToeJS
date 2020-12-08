@@ -1,0 +1,13 @@
+.fila
+{
+    width: 20px;
+    height: 80px;
+}
+.contenedor
+{
+    width: 350px;
+    margin: 0 auto;
+}
+#logo{
+    width: 300px;
+}
