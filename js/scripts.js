@@ -22,8 +22,8 @@ $(document).ready(function () {
             }
             buscarGanador();
         }
-
-
+        if (clicks >= 9 && final==false)
+                alert("¡Empate!");
     });
 
     function buscarGanador() {
@@ -39,7 +39,7 @@ $(document).ready(function () {
         if (clicks >= 5) { //Minimo 5 clicks
 
             //Buscar Horizontal
-            if (array[0] == array[1] && array[0] == array[2] && array[0]!="") {
+            if (array[0] == array[1] && array[0] == array[2] && array[0] != "") {
                 if (array[0] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[0] == "O")
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
                 final = true;
             }
-            else if (array[3] == array[4] && array[3] == array[5] && array[3]!="") {
+            else if (array[3] == array[4] && array[3] == array[5] && array[3] != "") {
                 if (array[3] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[3] == "O")
@@ -55,7 +55,7 @@ $(document).ready(function () {
 
                 final = true;
             }
-            else if (array[6] == array[7] && array[6] == array[8] && array[6]!="") {
+            else if (array[6] == array[7] && array[6] == array[8] && array[6] != "") {
                 if (array[6] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[6] == "O")
@@ -65,7 +65,7 @@ $(document).ready(function () {
             }
 
             //Buscar Vertical
-            if (array[0] == array[3] && array[0] == array[6] && array[0]!="") {
+            if (array[0] == array[3] && array[0] == array[6] && array[0] != "") {
                 if (array[0] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[0] == "O")
@@ -73,7 +73,7 @@ $(document).ready(function () {
 
                 final = true;
             }
-            else if (array[1] == array[4] && array[1] == array[7] && array[1]!="") {
+            else if (array[1] == array[4] && array[1] == array[7] && array[1] != "") {
                 if (array[1] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[1] == "O")
@@ -81,7 +81,7 @@ $(document).ready(function () {
 
                 final = true;
             }
-            else if (array[2] == array[5] && array[2] == array[8] && array[2]!="") {
+            else if (array[2] == array[5] && array[2] == array[8] && array[2] != "") {
                 if (array[2] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[2] == "O")
@@ -91,7 +91,7 @@ $(document).ready(function () {
             }
 
             //Buscar Diagonal
-            if (array[0] == array[4] && array[0] == array[8] && array[0]!="") {
+            if (array[0] == array[4] && array[0] == array[8] && array[0] != "") {
                 if (array[0] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[0] == "O")
@@ -99,7 +99,7 @@ $(document).ready(function () {
 
                 final = true;
             }
-            else if (array[2] == array[4] && array[2] == array[6] && array[2]!="") {
+            else if (array[2] == array[4] && array[2] == array[6] && array[2] != "") {
                 if (array[2] == "X")
                     alert("Gana el jugador 1 X");
                 else if (array[2] == "O")
@@ -111,13 +111,13 @@ $(document).ready(function () {
     }
 
     //Reiniciar juego
-    $("#botonReinicio").click(function (e) { 
+    $("#botonReinicio").click(function (e) {
         e.preventDefault();
-        clicks=0;
-        final=false;
+        clicks = 0;
+        final = false;
         $(".tabla td").each(function () {
             $(this).html("");
-        }); 
+        });
     });
 
 });
